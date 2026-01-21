@@ -1,0 +1,55 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+.parent {
+
+    width: 800px;
+    margin: auto;
+    background-color: #EEEEEE;
+    font-family: Arial;
+    font-weight: 600;
+}
+
+.float {
+
+    float: left;
+    background-color: #DDDDDD;
+    text-align: center;
+    padding: 20px;
+    margin-top: 15px;;
+    margin-left: 15px;;
+}
+
+.clear {
+
+    clear: both;
+}
+
+.full-width {
+
+    /* 100% ==> حجم عرض الأب كاملا */
+    /* 40px ==> البادينج الزيادة */
+    /* 30px ==> المارجن الزيادة */
+    width: calc(100% - 40px - 30px);
+}
+
+.one-third {
+
+    width: calc(calc(100% - 120px - 60px) / 3);
+}
+
+.one-half {
+
+    width: calc(calc(100% - 80px - 45px) / 2);
+}
+
+.one-fourth {
+
+    width: calc(calc(100% - 160px - 75px) / 4);
+    margin-bottom: 15px;
+}

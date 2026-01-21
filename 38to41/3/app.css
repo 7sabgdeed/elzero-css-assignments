@@ -1,0 +1,89 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+* {
+
+    box-sizing: border-box;
+}
+
+.parent {
+
+    width: 550px;
+    margin: auto;
+    font-family: Arial;
+    text-align: center;
+}
+
+.basic-plan,
+.pro-plan {
+    
+    background-color: #EEEEEE;
+    float: left;
+    margin: 0px 20px;
+    width: calc((100% - (4 * 20px)) / 2);
+}
+
+.clear {
+    
+    clear: both;
+}
+
+.bundle {
+    
+    background-color: #03A9F4;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    width: 85%;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px auto;
+    font-weight: 600;
+}
+
+.price {
+
+    background-color: #DDDDDD;
+    font-size: 35px;
+    width: 85%;
+    margin: 20px auto;
+    line-height: 199.75px;
+    border-radius: 50%;
+}
+
+.basic-plan,
+.pro-plan {
+    
+    position: relative;
+}
+
+.pro-plan::before {
+    
+    content: "Or";
+    background-color: #03A9F4;
+    color: #FFFFFF;
+    font-size: small;
+    font-weight: 600;
+    width: 25px;
+    padding: 5px 0px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: calc(25px / -2);
+    left: calc((25px / -2) - 20px);
+}
+
+.basic-plan::after {
+
+    content: "";
+    background-color: #03A9F4;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: calc(-1px - 20px);
+}

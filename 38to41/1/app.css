@@ -1,0 +1,67 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+* {
+
+    box-sizing: border-box;
+}
+
+div {
+
+    font-family: Arial;
+    width: 100px;
+    height: 100px;
+    background-color: #EEEEEE;
+    float: left;
+    margin-top: 50px;
+    margin-left: 50px;
+    border: 3px solid black;
+    border-radius: 50%;
+    counter-increment: div-counter;
+    position: relative;
+
+    -webkit-box-shadow:     5px 5px 0px 0px #2196F3,
+                          -5px -5px 0px 0px #E91E63;
+    
+    -moz-box-shadow:        5px 5px 0px 0px #2196F3,
+                          -5px -5px 0px 0px #E91E63;
+    
+    -ms-box-shadow:         5px 5px 0px 0px #2196F3,
+                          -5px -5px 0px 0px #E91E63;
+    
+    -o-box-shadow:          5px 5px 0px 0px #2196F3,
+                          -5px -5px 0px 0px #E91E63;
+    
+    box-shadow:             5px 5px 0px 0px #2196F3,
+                          -5px -5px 0px 0px #E91E63;
+}
+
+div::before {
+
+    content: counter(div-counter);
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 5px 10.95px;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 50%;
+    margin-right: -16.5px;
+    top: 0px;
+    margin-top: -16.5px;
+}
+
+div::after {
+
+    content: "Element";
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    right: 50%;
+    margin-right: -29.35px;
+}

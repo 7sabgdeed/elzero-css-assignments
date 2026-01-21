@@ -1,0 +1,32 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+div {
+    
+    font-family: Arial;
+    width: 400px;
+    margin: auto;
+    background-color: #EEEEEE !important;
+    padding: 35px !important;
+    border: 0px !important;
+    font-size: 0px !important;
+    position: relative;
+}
+
+div::before {
+    
+    content: "Elzero";
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    margin-top: calc(23px / -2);
+    right: 50%;
+    margin-right: calc(60.03px / -2);
+}

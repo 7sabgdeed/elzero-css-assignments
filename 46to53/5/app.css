@@ -1,0 +1,58 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+:root {
+
+    --space-between-each-element-in-a-row: 50px;
+}
+
+.parent {
+
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.parent div {
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: calc((100% - (var(--space-between-each-element-in-a-row) * 4)) / 4);
+    height: 50%;
+}
+
+.one {
+
+    background-color: #FF9800;
+}
+
+.two {
+
+    background-color: #8BC34A;
+}
+
+.three {
+
+    background-color: #795548;
+}
+
+.four {
+
+    background-color: #673AB7;
+    order: -1;
+}
+
+.two,
+.four {
+
+    align-self: flex-end;
+}

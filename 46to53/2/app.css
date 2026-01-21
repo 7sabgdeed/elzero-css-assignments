@@ -1,0 +1,33 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+:root {
+
+    --space-between-each-element-in-a-row: 10px;
+}
+
+.parent {
+
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.parent div {
+
+    background-color: #F44336;
+    color: #FFFFFF;
+    width: calc((100% - (var(--space-between-each-element-in-a-row) * 3)) / 3);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

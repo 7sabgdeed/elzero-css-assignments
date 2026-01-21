@@ -1,0 +1,57 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+/* يوم كامل عشان أحلها............ */
+
+.parent {
+
+    --parent-width: 800px;
+    width: var(--parent-width);
+    margin: auto;
+    background-color: #EEEEEE;
+    font-family: Arial;
+    font-weight: 600;
+}
+
+.float {
+
+    float: left;
+    background-color: #DDDDDD;
+    text-align: center;
+    --padding: 20px;
+    padding: var(--padding);
+    --margin: 15px;
+    margin-top: var(--margin);
+    margin-left: var(--margin);
+}
+
+.clear {
+
+    clear: both;
+}
+
+.full-width {
+
+    width: calc(calc(var(--parent-width) - calc(calc(1 + 1) * var(--margin)) - calc(1 * 2 * var(--padding))) / 1);
+}
+
+.one-third {
+
+    width: calc(calc(var(--parent-width) - calc(calc(3 + 1) * var(--margin)) - calc(3 * 2 * var(--padding))) / 3);
+}
+
+.one-half {
+
+    width: calc(calc(var(--parent-width) - calc(calc(2 + 1) * var(--margin)) - calc(2 * 2 * var(--padding))) / 2);
+}
+
+.one-fourth {
+
+    width: calc(calc(var(--parent-width) - calc(calc(4 + 1) * var(--margin)) - calc(4 * 2 * var(--padding))) / 4);
+    margin-bottom: var(--margin);
+}

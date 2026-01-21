@@ -1,0 +1,32 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+p {
+
+    font-family: Arial;
+    background-color: #EFEFEF;
+    width: 400px;
+    padding: 20px;
+    margin-left: 75px;
+    border-right: 5px solid #F44336;
+    position: relative;
+    counter-increment: myCounter;
+}
+
+p::before {
+
+    content: counter(myCounter) ;
+    background-color: #F44336;
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 20.46px 25px;
+    position: absolute;
+    top: 50%;
+    margin-top:calc(58.91px / -2); 
+    left: -58.91px;
+}
