@@ -1,0 +1,60 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+* {
+
+    box-sizing: border-box;
+}
+
+:root {
+
+    --border-thickness: 10px;
+}
+
+div {
+
+    font-family: "Libre Bodoni", serif; /* مش نفس الخط بس قريب جدا */
+    background-color: #EEEEEE;
+    width: 600px;
+    margin: auto;
+    font-size: 3rem;
+    letter-spacing: 8px;
+    font-weight: 600;
+    text-align: center;
+    padding: 30px;
+    border-right: var(--border-thickness) solid #673AB7;
+    border-left: var(--border-thickness) solid #F44336;
+    position: relative;
+}
+
+div::first-letter {
+
+    color: #F44336;
+}
+
+div::before {
+
+    content: "";
+    width: 100%;
+    height: var(--border-thickness);
+    background-image: linear-gradient(to right, #F44336 0 20%, #2196F3 20% 40%, #4CAF50 40% 60%, #E91E63 60% 80%, #673AB7 80%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+div::after {
+
+    content: "";
+    width: 100%;
+    height: var(--border-thickness);
+    background-image: linear-gradient(to right, #F44336 0 20%, #2196F3 20% 40%, #4CAF50 40% 60%, #E91E63 60% 80%, #673AB7 80%);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
