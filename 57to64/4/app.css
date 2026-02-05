@@ -1,0 +1,53 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+.grid {
+
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.grid div {
+
+    background-color: #2196F3;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one {
+
+    order: 1;
+    grid-column: span 3;
+}
+
+.two {
+
+    grid-column: span 2;
+}
+
+.five {
+
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.eight {
+
+    order: -1;
+    grid-column: span 3;
+}

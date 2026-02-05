@@ -1,0 +1,79 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+.container {
+
+    font-family: Arial;
+    background-color: #EEEEEE;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+}
+
+.container div {
+    
+    border-bottom: 3px solid #FF3D00;
+    padding: 20px;
+    position: relative;
+}
+
+.container div .name,
+.container div .bold-lorem {
+
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.container div .job {
+    
+    font-size: 1rem;
+    color: #A8A8A8;
+    position: relative;
+    top: -10px;
+    font-weight: 600;
+}
+
+.container .black-background {
+
+    background-color: black;
+    color: white; 
+}
+
+.container .white-background {
+
+    background-color: white;
+}
+
+.osama-mohamed {
+
+    grid-column: span 2;
+}
+
+.shady-nabil {
+
+    grid-row: span 3;
+}
+
+.mohamed-ibrahim {
+
+    grid-row: span 2;
+}
+
+.mahmoud-mohamed,
+.ezz-eldin {
+
+    grid-column: span 2;
+}
+
+.container div .bold-lorem,
+.container div .normal-lorem {
+
+    line-height: 2rem;
+}

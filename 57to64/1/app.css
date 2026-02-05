@@ -1,0 +1,39 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+.grid {
+
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 40px 1fr;
+  gap: 20px;
+  counter-reset: my-counter;
+}
+
+.grid div::before {
+
+    counter-increment: my-counter;
+    content: "Element " counter(my-counter);
+}
+
+.grid div {
+
+    font-family: Arial;
+    font-weight: 600;
+    color: white;
+    background-color: #607D8B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
