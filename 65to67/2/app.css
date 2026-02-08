@@ -1,0 +1,79 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+:root {
+
+    --border-width: 10px;
+    --div-and-before-width: 200px;
+    --div-and-before-height: 200px;
+    --after-width: calc(var(--div-and-before-width) + (var(--border-width) * 2));
+    --after-height: calc(var(--div-and-before-height) + (var(--border-width) * 2));
+    --before-overall-width: (var(--div-and-before-width) + (var(--border-width) * 2));
+    --before-overall-height: (var(--div-and-before-height) + (var(--border-width) * 2));
+    --after-overall-width: (var(--after-width) + (var(--border-width) * 2));
+    --after-overall-height: (var(--after-height) + (var(--border-width) * 2));
+}
+
+body {
+
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* display: grid;
+    justify-content: center;
+    align-content: center; */
+}
+
+div {
+
+    width: var(--div-and-before-width);
+    height: var(--div-and-before-height);
+    background-color: #EEEEEE;
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+div::before {
+    
+    content: "";
+    width: var(--div-and-before-width);
+    height: var(--div-and-before-height);
+    position: absolute;
+    top: 50%;
+    margin-top: calc(var(--before-overall-width) / -2);
+    left: 50%;
+    margin-left: calc(var(--before-overall-heigth) / -2);
+    border: var(--border-width) solid;
+    border-color: #E91E63 #E91E63 #E91E63 #FFFFFF;
+    border-radius: 50%;
+}
+
+div::after {
+
+    content: "";
+    width: var(--after-width);
+    height: var(--after-height);
+    position: absolute;
+    top: 50%;
+    margin-top: calc( var(--after-overall-heigth) / -2);
+    left: 50%;
+    margin-left: calc( var(--after-overall-width) / -2);
+    border: var(--border-width) solid;
+    border-color: #2196F3 #FFFFFF #2196F3 #2196F3;
+    border-radius: 50%;
+}

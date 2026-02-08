@@ -1,0 +1,65 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+* {
+
+    box-sizing: border-box;
+}
+
+:root {
+
+    --blue-and-pink-boxes-width: 305px;
+    --blue-and-pink-boxes-height: 205px;
+    --blue-and-pink-boxes-scale: 1.01;
+}
+
+div {
+
+    width: 300px;
+    height: 200px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEEEEE;
+    color: #03A9F4;
+    font-size: 2rem;
+    font-weight: 600;
+    border: 1.5px solid #CCCCCC;
+    position: relative;
+}
+
+div::before {
+
+    content: "";
+    width: var(--blue-and-pink-boxes-width);
+    height: var(--blue-and-pink-boxes-height);
+    background-color: #E91E63;
+    position: absolute;
+    top: 50%;
+    margin-top: calc(var(--blue-and-pink-boxes-height) / -2);
+    left: 50%;
+    margin-left: calc(var(--blue-and-pink-boxes-width) / -2);
+    transform: rotate(5deg) scale(var(--blue-and-pink-boxes-scale));
+    z-index: -2;
+}
+
+div::after {
+    
+    content: "";
+    width: var(--blue-and-pink-boxes-width);
+    height: var(--blue-and-pink-boxes-height);
+    background-color: #03A9F4;
+    position: absolute;
+    top: 50%;
+    margin-top: calc(var(--blue-and-pink-boxes-height) / -2);
+    left: 50%;
+    margin-left: calc(var(--blue-and-pink-boxes-width) / -2);
+    transform: rotate(-5deg) scale(var(--blue-and-pink-boxes-scale));
+    z-index: -1;
+}
