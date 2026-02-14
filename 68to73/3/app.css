@@ -1,0 +1,21 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+.class {
+
+  transform: matrix(3, 0.2679, 0, 3, 20, 100);
+
+  /*
+        transform: scaleX(3);
+        transform: skewY(0.2679deg);
+        transform: skewX(0deg);
+        transform: scaleY(3);
+        transform: translateX(20px);
+        transform: translateY(100px);
+  */
+}

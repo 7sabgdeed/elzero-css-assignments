@@ -1,0 +1,78 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+* {
+
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* 
+        q => قطر المربع الأسود
+        q => بتساوي طول المربع الرصاصي
+        q = 200px
+
+        q = sqrt(2 * a)  ===> القطر بيساوي جذر حاصل ضرب 2 في مساحة المربع
+
+        200 = sqrt(2a)
+        40,000 = 2a
+        a = 20,000
+        width * height = 20,000
+        height = width = x
+
+        x² = 20,000
+        x  = sqrt(20,000)
+    */
+
+    --after-width-and-height: calc(sqrt(20000) * 1px);
+}
+
+body {
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+
+    width: 200px;
+    height: 200px;
+    background-color: #607d8b;
+    border-bottom: 5px solid black;
+    position: absolute;
+}
+
+div::before {
+
+    content: "Elzero";
+    color: white;
+    font-family: Arial;
+    position: absolute;
+    bottom: 3px;
+    left: 10px;
+}
+
+div::after {
+
+    content: "";
+    width: var(--after-width-and-height);
+    height: var(--after-width-and-height);
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0px;
+    margin-top: calc(var(--after-width-and-height) / -2);
+    left: 50%;
+    margin-left: calc(var(--after-width-and-height) / -2);
+    transform: rotate(45deg);
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+    box-sizing: border-box;
+}
