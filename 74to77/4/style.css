@@ -1,0 +1,166 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+* {
+
+    box-sizing: border-box;
+}
+
+body {
+
+    height: 100dvh;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#letters-container {
+
+    display: flex;
+    gap: 30px;
+}
+
+.letter-container {
+
+    width: 210px;
+    height: 420px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    position: relative;
+}
+
+.letter-container div {
+
+    background-color: #323234;
+}
+
+
+#left {
+
+    grid-column: 1/2;
+    grid-row: 1/8;
+}
+
+#top {
+
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+
+#middle {
+
+    grid-column: 2/4;
+    grid-row: 4/5;
+}
+
+#bottom {
+
+    grid-column: 2/4;
+    grid-row: 7/8;
+}
+
+
+#E-letter:before {
+
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #FEA62D;
+    position: absolute;
+    transform: translate(calc(210px - 100% - 10px), 10px);
+    animation-name: move-E-letter-yellow-box;
+    animation-duration: 5s;
+    animation-delay: 3.5s;
+}
+
+#L-letter:before {
+
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #FEA62D;
+    opacity: 0%;
+    position: absolute;
+    transform: translate(calc(210px - 100% - 10px), calc(420px - 100% - 10px));
+    animation-name: move-L-letter-yellow-box;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+}
+
+@keyframes move-E-letter-yellow-box {
+
+    0% {
+
+        transform: translate(calc(210px - 100% - 10px), 10px);
+
+    } 11% {
+
+        transform: translate(10px, 10px);
+    }
+      22% {
+
+        transform: translate(10px, calc(210px - 50%));    
+
+    } 33% {
+
+        transform: translate(calc(210px - 100% - 10px), calc(210px - 50%));
+
+    } 44% {
+        
+        transform: translate(10px, calc(210px - 50%));
+
+    } 55% {
+
+        transform: translate(10px, calc(420px - 100% - 10px));  
+
+    } 66% {
+
+        transform: translate(calc(210px - 100% - 10px), calc(420px - 100% - 10px));     
+
+    } 77% {
+
+        transform: translate(10px, calc(420px - 100% - 10px));
+
+    } 88% {
+
+        transform: translate(10px, 10px);
+
+    } 100% {
+
+        transform: translate(calc(210px - 100% - 10px), 10px);
+    }  
+}
+
+@keyframes move-L-letter-yellow-box {
+
+    0% {
+
+        transform: translate(calc(210px - 100% - 10px), calc(420px - 100% - 10px));
+        opacity: 100%;
+        
+    } 10% {
+        
+        transform: translate(calc(210px - 100% - 10px), calc(420px - 100% - 10px));
+        opacity: 100%;
+
+    } 50% {
+
+        transform: translate(15px, calc(420px - 100% - 10px));
+
+    } 75% {
+
+        transform: translate(15px, 10px);
+        opacity: 100%;
+
+    } 100% {
+        transform: translate(15px, 10px);
+        opacity: 0%;
+    }
+}
