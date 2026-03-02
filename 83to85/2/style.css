@@ -1,0 +1,106 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+* {
+
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+
+    --gap-between-cards-width-greater-than-or-equal-to-1024: 20px;
+    --gap-between-cards-width-greater-than-or-equal-to-768: 20px;
+}
+
+body {
+
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-container {
+
+    width: 90%;
+}
+
+.product-card {
+
+    font-family: Arial;
+    background-color: #EDEDED;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+@media (width >= 1024px) {
+
+    .cards-container {
+
+        display: flex;
+        gap: var(--gap-between-cards-width-greater-than-or-equal-to-1024);
+    }
+
+    .product-card {
+
+        width: calc((100% - var(--gap-between-cards-width-greater-than-or-equal-to-1024) / 4));
+        font-size: 0.75rem;
+    }
+
+    .product-card h3 {
+        
+        color: #009688;
+    }
+}
+
+
+@media (width >= 768px) and (width < 1024px) {
+
+    .cards-container {
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--gap-between-cards-width-greater-than-or-equal-to-768);
+    }
+
+    .product-card {
+
+        width: calc((100% - var(--gap-between-cards-width-greater-than-or-equal-to-768)) / 2);
+        font-size: 0.75rem;
+    }
+
+    .product-card h3 {
+        
+        color: red;
+    }
+}
+
+
+@media (width < 768px) {
+
+    .cards-container {
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product-card {
+
+        width: 100%;
+        font-size: 0.75rem;
+    }
+}

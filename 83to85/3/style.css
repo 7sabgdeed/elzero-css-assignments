@@ -1,0 +1,128 @@
+/*
+    اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+    وجليسك على العرش يوم القيامة
+    محمد صلى الله عليه وسلم
+*/
+
+
+
+* {
+
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+
+    --gap-between-cards-width-greater-than-or-equal-to-1024: 25px;
+    --gap-between-cards-width-greater-than-or-equal-to-768: 25px;
+}
+
+body {
+
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-container {
+
+    width: 90%;
+}
+
+.product-card {
+
+    font-family: Arial;
+    background-color: #EDEDED;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+@media (width >= 1024px) {
+
+    .cards-container {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap-between-cards-width-greater-than-or-equal-to-1024);
+    }
+
+    .product-card {
+
+        font-size: 0.8rem;
+    }
+
+    .product-card-1,
+    .product-card-4 {
+
+        width: 100%;
+    }
+
+    .product-card-2,
+    .product-card-3 {
+
+        width: calc((100% - var(--gap-between-cards-width-greater-than-or-equal-to-1024)) / 2);
+    }
+    
+    .product-card h3 {
+        
+        color: #009688;
+    }
+}
+
+
+@media (width >= 768px) and (width < 1024px) {
+
+    .cards-container {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap-between-cards-width-greater-than-or-equal-to-768);
+    }
+
+    .product-card {
+
+        font-size: 0.8rem;
+    }
+
+    .product-card-1 {
+
+        width: 100%;
+    }
+
+    .product-card-2,
+    .product-card-3,
+    .product-card-4 {
+
+        width: calc((100% - (var(--gap-between-cards-width-greater-than-or-equal-to-768) * 2)) / 3);
+    }
+
+    .product-card h3 {
+        
+        color: red;
+    }
+}
+
+
+@media (width < 768px) {
+
+    .cards-container {
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product-card {
+
+        width: 100%;
+        font-size: 0.75rem;
+    }
+}
